@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <!--linking style sheet-->
+    <link rel="stylesheet" href="style.css">
+    <!--font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+<!-- Popup -->
+<div id="signup-popup" class="popup">
+    <div class="popup-content">
+        <span id="close-popup" class="close">&times;</span>
+        <h2>Sign Up</h2>
+        <p>GET 20% OFF for your first order!</p>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
+
+
+   <!-- Top Navbar -->
+<div class="navbar">
+  <div class="navbar1">
+    <h1>Nostra</h1>
+    <!-- Hamburger Icon -->
+<p id="opennav" class="cursor-pointer text-xl">☰</p>
+
+  </div>
+
+  <div class="navbar2 hidden md:flex">
+    <a href="index.html">Home</a>
+    <a href="#new-arrivals">New Arrivals</a>
+    <a href="#most-wanted">Most Wanted</a>
+    <a href="collections.html">Collections</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</div>
+
+<!-- Side Navbar (Mobile) -->
+<section id="sidenav" class="bg-green-100 fixed z-20 top-0 right-[-50%] w-2/3 h-full transition-all duration-500 md:hidden">
+  <div class="text-right p-5">
+    <p id="closenav" class="inline cursor-pointer text-xl">X</p>
+  </div>
+
+  <ul class="flex flex-col gap-10 items-center text-gray-600 mt-10">
+    <li><a class="hover:underline hover:text-black" href="index.html">Home</a></li>
+    <li><a class="hover:underline hover:text-black" href="#new-arrivals">New Arrivals</a></li>
+    <li><a class="hover:underline hover:text-black" href="#most-wanted">Most Wanted</a></li>
+    <li><a class="hover:underline hover:text-black" href="collections.html">Collections</a></li>
+    <li><a class="hover:underline hover:text-black" href="contact.html">Contact Us</a></li>
+  </ul>
+</section>
+
+
+    <!--display section-->
+   <div class="slider">
+    <div class="slide active" style="background-image: url('./images/display/2.jpg');">
+      <div class="content">
+        <h1>Level up your style with our</h1>
+        <p>Summer Collections</p>
+        <button>Shop Now →</button>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image: url('./images/display/1.jpg');">
+      <div class="content">
+        <h1>Discover the latest trends</h1>
+        <p>New Arrivals Every Week</p>
+        <button>Shop Now →</button>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image: url('./images/display/3.jpg');">
+      <div class="content">
+        <h1>Be bold, be stylish</h1>
+        <p>Men’s & Women’s Fashion</p>
+        <button>Shop Now →</button>
+      </div>
+    </div>
+
+   
+  </div>
+
+    <!--Brands-->
+    <section class="brand__part">
+        
+             <h1>Brands</h1>
+
+       
+        <div class="brand">
+        <div class="brand__icons">
+            <img src="./images/icons/puma.png">
+            <p>Puma</p>
+        </div>
+        <div class="brand__icons">
+            <img src="./images/icons/simple.png">
+            <p>Simple</p>
+        </div>
+        <div class="brand__icons" >
+    
+            <img src="./images/icons/leaves.png">
+            <p>Leaves</p>
+        </div>
+        <div class="brand__icons">
+            <img src="./images/icons/behance.png">
+            <p>Behance</p>
+        </div>
+        <div class="brand__icons">
+            <img src="./images/icons/twitch.png">
+            <p>Twitch</p>
+        </div>
+        <div class="brand__icons">
+            <img src="./images/icons/nike.png">
+            <p>Nike</p>
+        </div>
+        <div class="brand__icons">
+            <img src="./images/icons/puma.png">
+            <p>Puma</p>
+        </div>
+         <div class="brand__icons">
+            <img src="./images/icons/adidas.png">
+            <p>Adidas</p>
+        </div>
+    </div>
+    </section>
+    <!--Experiences-->
+    <section class="experience__part">
+        <div class="exp__header">
+            <h1>We Provide Best Customer Experiences</h1>
+            <p>|| We ensure that our customer have the best shopping Experience</p>
+        </div>
+        <div class="exp__body">
+            <div class="exp__body__1">
+                <i class="fa-solid fa-shirt fa-flip-horizontal" style="color: #1c1c1c;"></i><br>
+              
+                <h2>Quality Products</h2><br>
+                <p>We ensure top-notch quality that meets your expectations.</p>
+            </div>
+            <div class="exp__body__1">
+                <i class="fa-solid fa-phone" style="color: #0f0f10;"></i><br>
+                <h2>24/7 Support</h2><br>
+                <p>Our team is always ready to assist you anytime, anywhere.</p>
+            </div>
+            <div class="exp__body__1">
+                <i class="fa-solid fa-truck " style="color: #121212;"></i><br>
+                <h2>Fast & Secure Delivery</h2><br>
+                <p>Get your orders delivered quickly and safely.</p>
+            </div>
+            <div class="exp__body__1">
+                  <i class="fa-solid fa-star" style="color: #0d0d0d;"></i><br>
+                <h2>Customer Satisfaction</h2><br>
+                <p>Your happiness is our highest priority.</p>
+            </div>
+            
+        </div>
+    </section>
+    <!--New Arrivals-->
+    <section class="arrival__part" id="new-arrivals">
+        <h1>New Arrivals</h1>
+        <div class="Arrivals">
+            <div class="Arrivals__des">
+                <img src="./images/products/f1.jpg">
+                <p>Shop Now <i class="fa-solid fa-arrow-right" style="color: #171717;"></i></p>
+            </div>
+            <div class="Arrivals__des">
+                <img src="./images/products/f2.jpg">
+                <p>Shop Now <i class="fa-solid fa-arrow-right" style="color: #171717;"></i></p>
+            </div>
+            <div class="Arrivals__des">
+                <img src="./images/products/f3.jpg">
+                <p>Shop Now <i class="fa-solid fa-arrow-right" style="color: #171717;"></i></p>
+            </div>
+            <div class="Arrivals__des">
+                <img src="./images/products/f4.jpg">
+                <p>Shop Now <i class="fa-solid fa-arrow-right" style="color: #171717;"></i></p>
+            </div>
+        </div>
+
+    </section>
+    <!--Most Wanted-->
+    <section class="wanted__part" id="most-wanted">
+        <h1>Most Wanted</h1>
+        <div class="most_wanted">
+            <div class="most__wanted__des">
+                  <p>sale</p>
+                <img src="./images/products/f5.jpg">
+                
+            </div>
+            
+            <div  class="most__wanted__des">
+                  <p>sale</p>
+                <img src="./images/products/f6.jpg">
+                
+            </div>
+            <div  class="most__wanted__des">
+                  <p>sale</p>
+                <img src="./images/products/f7.jpg">
+               
+            </div>
+            <div  class="most__wanted__des">
+                  <p>sale</p>
+                <img src="./images/products/n1.jpg">
+         
+            </div>
+            <div  class="most__wanted__des">
+                  <p>sale</p>
+                <img src="./images/products/n2.jpg">
+        
+            </div>
+            <div  class="most__wanted__des">
+                  <p>sale</p>
+                <img src="./images/products/n3.jpg">
+              
+            </div>
+            <div  class="most__wanted__des">
+                  <p>sale</p>
+                <img src="./images/products/n4.jpg">
+          
+            </div>
+        </div>
+    </section>
+    <!--limited offer-->
+    <section class="limited__part">
+        <div class="limited__offer">
+        <div class="limited__offer__img">
+            <img src="./images/display/1.jpg" >
+        </div>
+        <div class="limited__offer__des">
+            <h1>Limited Offer</h1>
+            <h2>35% OFF on this for the first 30 Customers</h2>
+            <p>Shop Now <i class="fa-solid fa-arrow-right" style="color: #171717;"></i></p>
+        </div>
+        </div>
+    </section>
+    <!--news letter-->
+    <section class="news__part">
+        <h1>Join our News Letter</h1>
+        <p>Signup for our email newspaper to get exclusive discounts,updates and more</p>
+        <input style="width: 100%;" type="text">
+        <p class="news__part__button">Subscribe<i class="fa-solid fa-arrow-right" style="color: #f6f1f1;"></i></p>
+
+    </section>
+    <!--footer-->
+    <section class="footer__part">
+        <h1>Nostra</h1><br>
+        <p>The Standard chunk of Lorem ipsum used since the 1500s is reprodused below for those interest</p><br>
+        <div class="footer__icons">
+        <i class="fa-brands fa-instagram" style="color: #f7f4f4;"></i>
+        <i class="fa-brands fa-twitter" style="color: #f4ecec;"></i>
+        <i class="fa-brands fa-facebook" style="color: #f0f2f4;"></i><br><br>
+        </div>
+        <p>@2025Nostra.com</p>
+    </section>
+      <script src="script.js"></script>
+</body>
+</html>

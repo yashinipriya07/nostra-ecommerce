@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <!--linking style sheet-->
+    <link rel="stylesheet" href="style.css">
+    <!--font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!--Nav bar-->
+  <!--Nav bar-->
+    <div class="navbar">
+  <div class="navbar1">
+    <h1>Nostra</h1>
+  </div>
+
+  <div class="navbar2">
+    <a href="index.html">Home</a>
+    <a href="">New Arrival</a>
+    <a href="">Most Wanted</a>
+    <a href="collections.html">Collections</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</div>
+    <!--collections-->
+    <section class="collections">
+    <div class="left__side">
+        <div>
+            <h3>Occasion</h3>
+            <label><input type="checkbox" name="occasion" value="summer"> Summer</label><br>
+            <label><input type="checkbox" name="occasion" value="winter"> Beach</label><br>
+            <label><input type="checkbox" name="occasion" value="party"> Party</label><br>
+
+        </div>
+        <div>
+            <h3>Colors</h3>
+            <label><input type="checkbox" name="colors" value="Red">Red</label><br>
+            <label><input type="checkbox" name="colors" value="Blue">Blue</label><br>
+            <label><input type="checkbox" name="colors" value="White">white</label><br>
+            <label><input type="checkbox" name="colors" value="Green">Green</label><br>
+        </div>
+        <div>
+            <h3>Arrivals</h3>
+              <label><input type="checkbox" name="Arrivals" value="New">New</label><br>
+            <label><input type="checkbox" name="Arrivals" value="Old">Old</label><br>
+        </div>
+        </div>
+        <div class="right__side">
+        <div class="search__bar">
+           
+  <input type="text" placeholder="Search"style="width: 400px;">
+  <i class="fa-solid fa-magnifying-glass" style="color: #0d0d0d;"></i>
+
+
+        </div>
+        <div class="collection__images">
+            <div class="images" data-occasion="party" data-color="red" data-arrival="new" >
+                <img src="./images/products/f3.jpg">
+                <h4>Party Summer Shirt</h4>
+                <p>₹220</p>
+            </div>
+            <div class="images" data-occasion="summer" data-color="blue" data-arrival="new">
+                <img src="./images/products/f1.jpg">
+                <h4>Floral Summer Shirt</h4>
+                <p>₹310</p>
+            </div>
+            <div class="images"data-arrival="new" data-occasion="party" data-color="blue">
+                <img src="./images/products/f6.jpg">
+                <h4>Red Summer Shirt</h4>
+                <p>₹220</p>
+            </div>
+            <div class="images" data-arrival="new" data-occasion="party" data-color="white">
+                <img src="./images/products/f4.jpg">
+                <h4>Floral Summer Shirt</h4>
+                <p>₹260</p>
+            </div>
+            <div class="images" data-arrival="new" data-occasion="party" data-color="green">
+                <img src="./images/products/f2.jpg">
+                <h4>Floral Green Shirt</h4>
+                <p>₹390</p>
+            </div>
+            <div class="images" data-arrival="new" data-occasion="party" data-color="red">
+                <img src="./images/products/f3.jpg">
+                <h4>Floral Party Shirt</h4>
+                <p>₹579</p>
+            </div>
+            <div class="images" data-arrival="old" data-occasion="summer" data-color="blue">
+                <img src="./images/products/f1.jpg">
+                <h4>Beach Summer Shirt</h4>
+                <p>₹390</p>
+            </div>
+            <div class="images" data-arrival="old" data-occasion="beach" data-color="blue">
+                <img src="./images/products/n8.jpg">
+                <h4>Formal Party Shirt</h4>
+                <p>₹299</p>
+            </div>
+            <div class="images" data-arrival="new" data-occasion="party" data-color="yellow">
+                <img src="./images/products/n7.jpg">
+                <h4>Party Shirt</h4>
+                <p>₹410</p>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+    <!--news letter-->
+    <section class="news__part">
+        <h1>Join our News Letter</h1>
+        <p>Signup for our email newspaper to get exclusive discounts,updates and more</p>
+        <input style="width: 100%;" type="text">
+        <p class="news__part__button">Subscribe<i class="fa-solid fa-arrow-right" style="color: #f6f1f1;"></i></p>
+
+    </section>
+    <!--footer-->
+    <section class="footer__part">
+        <h1>Nostra</h1><br>
+        <p>The Standard chunk of Lorem ipsum used since the 1500s is reprodused below for those interest</p><br>
+        <div class="footer__icons">
+            <i class="fa-brands fa-instagram" style="color: #f7f4f4;"></i>
+            <i class="fa-brands fa-twitter" style="color: #f4ecec;"></i>
+            <i class="fa-brands fa-facebook" style="color: #f0f2f4;"></i><br><br>
+        </div>
+        <p>@2025Nostra.com</p>
+    </section>
+       <script src="script.js"></script>
+</body>
+
+</html>
