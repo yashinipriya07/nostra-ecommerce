@@ -48,7 +48,9 @@ cd nostra-ecommerce
 
 Open index.html in your browser to view the homepage.
 
-Usage Tips:
+---
+
+## Usage Tips:
 
 Navigate through Home, New Arrivals, Most Wanted, Collections, and Contact pages.
 
@@ -58,7 +60,9 @@ Click the hamburger icon on mobile for side navigation.
 
 Sign up via the popup for 20% off your first order.
 
-🗂 Folder Structure
+---
+
+## 🗂 Folder Structure
 Nostra/
 │
 ├─ images/           # Product and display images
@@ -69,7 +73,9 @@ Nostra/
 ├─ contact.html      # Contact page
 └─ README.md         # Project documentation
 
-✨ Highlights
+---
+
+## ✨ Highlights
 
 Fully responsive and mobile-first design.
 
@@ -81,8 +87,11 @@ Clean, maintainable code structure suitable for learning full-stack development.
 
 Easily extendable for real backend integration.
 
-📝 Author
+---
 
-Yashini Priya
+## 📝 Author
+
+Yashini Priya S
+
  IT Graduate | Engineering Student | Full-Stack Development Enthusiast
 
