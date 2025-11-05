@@ -1,26 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
-    //===== POP UP MESSAGE =====
+
+    // ====== POPUP ======
     const popup = document.getElementById('signup-popup');
     const closeBtn = document.getElementById('close-popup');
 
-    // Show popup after 2 seconds
-    setTimeout(() => {
-        popup.style.display = 'flex';
-    }, 2000);
+    if (popup) {
+        setTimeout(() => {
+            popup.style.display = 'flex';
+        }, 2000);
 
-    // Close popup when clicking X
-    closeBtn.addEventListener('click', () => {
-        popup.style.display = 'none';
-    });
-
-    // Close popup when clicking outside the content
-    window.addEventListener('click', (e) => {
-        if (e.target === popup) {
-            popup.style.display = 'none';
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                popup.style.display = 'none';
+            });
         }
-    });
 
-    // ======= SLIDER CODE =======
+        window.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    }
+
+    // ====== SLIDER ======
     const slides = document.querySelectorAll('.slide');
     if (slides.length > 0) {
         let index = 0;
@@ -39,38 +41,42 @@ document.addEventListener("DOMContentLoaded", () => {
         setInterval(nextSlide, 3000);
     }
 
-    // ===== Side Navbar =====
+    // ====== SIDE NAVBAR ======
     const sidenav = document.getElementById('sidenav');
     const openNav = document.getElementById('opennav');
     const closeNav = document.getElementById('closenav');
 
-    openNav.addEventListener('click', () => {
-        sidenav.style.right = '0';
-    });
+    if (sidenav && openNav && closeNav) {
+        openNav.addEventListener('click', () => sidenav.style.right = '0');
+        closeNav.addEventListener('click', () => sidenav.style.right = '-50%');
+    }
 
-    closeNav.addEventListener('click', () => {
-        sidenav.style.right = '-50%';
-    });
-
-    // ===== Collections Page Filtering =====
+    // ====== COLLECTION FILTERING ======
     const searchInput = document.querySelector(".search__bar input");
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     const products = document.querySelectorAll(".collection__images .images");
 
     if (searchInput && products.length > 0) {
+
         function filterProducts() {
             const searchText = searchInput.value.toLowerCase().trim();
-            const selectedOccasions = Array.from(document.querySelectorAll('input[name="occasion"]:checked')).map(cb => cb.value.toLowerCase());
-            const selectedColors = Array.from(document.querySelectorAll('input[name="colors"]:checked')).map(cb => cb.value.toLowerCase());
-            const selectedArrivals = Array.from(document.querySelectorAll('input[name="Arrivals"]:checked')).map(cb => cb.value.toLowerCase());
+
+            const selectedOccasions = Array.from(document.querySelectorAll('input[name="occasion"]:checked'))
+                .map(cb => cb.value.toLowerCase());
+            const selectedColors = Array.from(document.querySelectorAll('input[name="colors"]:checked'))
+                .map(cb => cb.value.toLowerCase());
+            const selectedArrivals = Array.from(document.querySelectorAll('input[name="Arrivals"]:checked'))
+                .map(cb => cb.value.toLowerCase());
 
             let anyVisible = false;
 
             products.forEach(product => {
-                const title = product.querySelector("h4").textContent.toLowerCase();
-                const productOccasion = product.dataset.occasion?.toLowerCase() || "";
-                const productColor = product.dataset.color?.toLowerCase() || "";
-                const productArrival = product.dataset.arrival?.toLowerCase() || "";
+                const title = product.querySelector("h4")?.textContent.toLowerCase() || "";
+
+                // Get dataset values safely
+                const productOccasion = (product.dataset.occasion || "").toLowerCase();
+                const productColor = (product.dataset.color || "").toLowerCase();
+                const productArrival = (product.dataset.arrival || "").toLowerCase();
 
                 const matchesSearch = searchText === "" || title.includes(searchText);
                 const matchesOccasion = selectedOccasions.length === 0 || selectedOccasions.includes(productOccasion);
@@ -85,24 +91,28 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
 
-            const noMsg = document.querySelector("#no-results");
+            // Show "No products found" message
+            let noMsg = document.querySelector("#no-results");
             if (!anyVisible) {
                 if (!noMsg) {
-                    const msg = document.createElement("p");
-                    msg.id = "no-results";
-                    msg.textContent = "No products found";
-                    msg.style.textAlign = "center";
-                    msg.style.fontWeight = "bold";
-                    msg.style.marginTop = "20px";
-                    document.querySelector(".collection__images").appendChild(msg);
+                    noMsg = document.createElement("p");
+                    noMsg.id = "no-results";
+                    noMsg.textContent = "No products found";
+                    noMsg.style.cssText = "text-align:center;font-weight:bold;margin-top:20px;";
+                    document.querySelector(".collection__images").appendChild(noMsg);
                 }
+                noMsg.style.display = "block";
             } else if (noMsg) {
-                noMsg.remove();
+                noMsg.style.display = "none";
             }
         }
 
+        // Add event listeners
         searchInput.addEventListener("input", filterProducts);
         checkboxes.forEach(cb => cb.addEventListener("change", filterProducts));
+
+        // Initial filter
         filterProducts();
     }
+
 });
