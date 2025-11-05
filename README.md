@@ -41,8 +41,8 @@ Nostra – Modern e-commerce website with product filtering, image sliders, side
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/yashinipriya07/nostra-ecommerce.git
-   Navigate to the project folder:
 
+ Navigate to the project folder:
 cd nostra-ecommerce
 
 
@@ -84,5 +84,5 @@ Easily extendable for real backend integration.
 📝 Author
 
 Yashini Priya
- IT Graduate Engineering Student | Full-Stack Development Enthusiast
+ IT Graduate | Engineering Student | Full-Stack Development Enthusiast
 
