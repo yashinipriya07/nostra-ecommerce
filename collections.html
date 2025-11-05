@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +7,58 @@
     <!--linking style sheet-->
     <link rel="stylesheet" href="style.css">
     <!--font awesome cdn-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-
 <body>
-    <!--Nav bar-->
-  <!--Nav bar-->
-    <div class="navbar">
+<!-- Popup -->
+<div id="signup-popup" class="popup">
+    <div class="popup-content">
+        <span id="close-popup" class="close">&times;</span>
+        <h2>Sign Up</h2>
+        <p>GET 20% OFF for your first order!</p>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
+
+
+   <!-- Top Navbar -->
+<div class="navbar">
   <div class="navbar1">
     <h1>Nostra</h1>
+    <!-- Hamburger Icon -->
+<p id="opennav" class="cursor-pointer text-xl">☰</p>
+
   </div>
 
-  <div class="navbar2">
+  <div class="navbar2 hidden md:flex">
     <a href="index.html">Home</a>
-    <a href="">New Arrival</a>
-    <a href="">Most Wanted</a>
+  <a href="index.html#new-arrivals">New Arrivals</a>
+<a href="index.html#most-wanted">Most Wanted</a>
+
     <a href="collections.html">Collections</a>
     <a href="contact.html">Contact Us</a>
   </div>
 </div>
+
+<!-- Side Navbar (Mobile) -->
+<section id="sidenav" class="bg-green-100 fixed z-20 top-0 right-[-50%] w-2/3 h-full transition-all duration-500 md:hidden">
+  <div class="text-right p-5">
+    <p id="closenav" class="inline cursor-pointer text-xl">X</p>
+  </div>
+
+  <ul class="flex flex-col gap-10 items-center text-gray-600 mt-10">
+    <li><a class="hover:underline hover:text-black" href="index.html">Home</a></li>
+    <li><a class="hover:underline hover:text-black" href="index.html#new-arrivals">New Arrivals</a></li>
+    <li><a class="hover:underline hover:text-black" href="index.html#most-wanted">Most Wanted</a></li>
+    <li><a class="hover:underline hover:text-black" href="collections.html">Collections</a></li>
+    <li><a class="hover:underline hover:text-black" href="contact.html">Contact Us</a></li>
+  </ul>
+</section>
+
     <!--collections-->
     <section class="collections">
     <div class="left__side">

@@ -1,68 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nostra</title>
-    <!--linking style sheet-->
+    <!-- Linking style sheet -->
     <link rel="stylesheet" href="style.css">
-    <!--font awesome cdn-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <!--Nav bar-->
-  <!--Nav bar-->
-    <div class="navbar">
-  <div class="navbar1">
-    <h1>Nostra</h1>
-  </div>
 
-  <div class="navbar2">
-    <a href="index.html">Home</a>
-    <a href="">New Arrival</a>
-    <a href="">Most Wanted</a>
-    <a href="collections.html">Collections</a>
-    <a href="contact.html">Contact Us</a>
-  </div>
-</div>
-    <!--contact us-->
+<body>
+
+    <!-- Popup -->
+    <div id="signup-popup" class="popup">
+        <div class="popup-content">
+            <span id="close-popup" class="close">&times;</span>
+            <h2>Sign Up</h2>
+            <p>GET 20% OFF for your first order!</p>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Top Navbar -->
+    <div class="navbar">
+        <div class="navbar1">
+            <h1>Nostra</h1>
+            <!-- Hamburger Icon for Mobile -->
+            <p id="opennav" class="cursor-pointer text-xl">☰</p>
+        </div>
+
+        <div class="navbar2 hidden md:flex">
+            <a href="index.html">Home</a>
+            <a href="index.html#new-arrivals">New Arrivals</a>
+            <a href="index.html#most-wanted">Most Wanted</a>
+            <a href="collections.html">Collections</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Side Navbar (Mobile) -->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 w-2/3 h-full transition-all duration-500 md:hidden" style="right: -50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer text-xl">X</p>
+        </div>
+
+        <ul class="flex flex-col gap-10 items-center text-gray-600 mt-10">
+            <li><a class="hover:underline hover:text-black" href="index.html">Home</a></li>
+            <li><a class="hover:underline hover:text-black" href="index.html#new-arrivals">New Arrivals</a></li>
+            <li><a class="hover:underline hover:text-black" href="index.html#most-wanted">Most Wanted</a></li>
+            <li><a class="hover:underline hover:text-black" href="collections.html">Collections</a></li>
+            <li><a class="hover:underline hover:text-black" href="contact.html">Contact Us</a></li>
+        </ul>
+    </section>
+
+    <!-- Contact Us Section -->
     <section class="contact__part">
         <h1>Contact Us</h1>
         <div class="contact__us">
-    
-
-  <div class="fs-field">
-    <label class="fs-label" for="name">Name:</label>
-    <input class="fs-input" id="name" name="name" />
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="email">Email:</label>
-    <input class="fs-input" id="email" name="email" required />
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="message">Message:</label>
-    <textarea class="fs-textarea" id="message" name="message"></textarea>
-    
-  </div>
-  <div class="fs-button-group">
-    <button class="fs-button" type="submit">Submit</button>
-  </div>
-
-</div>
-</section>
-
-                
-          
-      <!--news letter-->
-    <section class="news__part">
-        <h1>Join our News Letter</h1>
-        <p>Signup for our email newspaper to get exclusive discounts,updates and more</p>
-        <input style="width: 100%;" type="text">
-        <p class="news__part__button">Subscribe<i class="fa-solid fa-arrow-right" style="color: #f6f1f1;"></i></p>
-
+            <form>
+                <div class="fs-field">
+                    <label class="fs-label" for="name">Name:</label>
+                    <input class="fs-input" id="name" name="name" />
+                </div>
+                <div class="fs-field">
+                    <label class="fs-label" for="email">Email:</label>
+                    <input class="fs-input" id="email" name="email" required />
+                </div>
+                <div class="fs-field">
+                    <label class="fs-label" for="message">Message:</label>
+                    <textarea class="fs-textarea" id="message" name="message"></textarea>
+                </div>
+                <div class="fs-button-group">
+                    <button class="fs-button" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
     </section>
-    <!--footer-->
+
+    <!-- Newsletter Section -->
+    <section class="news__part">
+        <h1>Join our Newsletter</h1>
+        <p>Signup for our email newspaper to get exclusive discounts, updates, and more</p>
+        <input style="width: 100%;" type="text">
+        <p class="news__part__button">Subscribe <i class="fa-solid fa-arrow-right" style="color: #f6f1f1;"></i></p>
+    </section>
+  <!--footer-->
     <section class="footer__part">
         <h1>Nostra</h1><br>
         <p>The Standard chunk of Lorem ipsum used since the 1500s is reprodused below for those interest</p><br>
@@ -73,6 +102,9 @@
         </div>
         <p>@2025Nostra.com</p>
     </section>
-</form>
+
+    <!-- Script -->
+    <script src="script.js"></script>
 </body>
+
 </html>

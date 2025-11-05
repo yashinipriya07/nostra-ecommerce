@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (popup) {
         setTimeout(() => {
             popup.style.display = 'flex';
-        }, 2000);
+        }, 5000);
 
         if (closeBtn) {
             closeBtn.addEventListener('click', () => {
